@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	public ngOnInit(): void {
 		this.socket.getEventListener().subscribe(event => {
-			if(event.type == "messages") {
+			if(event.type == "message") {
 				let data = event.data.content;
 				if(event.data.sender) {
 					data = event.data.sender + ":" + data;
