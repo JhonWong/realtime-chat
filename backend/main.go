@@ -1,3 +1,7 @@
+// 通过manager管理多个client，使用管道接收并发送消息
+// 每个client负责从socket中读取，写入消息
+// 通过将http升级为socket，以实现双向通信和持久连接的目的
+// socket无需每次进行握手,可以降低延迟
 package main
 
 import (
